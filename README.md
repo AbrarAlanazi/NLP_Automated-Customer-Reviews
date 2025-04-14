@@ -4,4 +4,4 @@
 develop a product review system powered by NLP models that aggregate customer feedback from different sources
 
 # Dataset:
-Primary Dataset: Amazon Product Reviews
+Primary Dataset: Amazon Product Reviews
