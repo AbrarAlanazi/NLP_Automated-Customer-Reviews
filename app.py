@@ -7,28 +7,13 @@ import joblib
 import numpy as np
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# --- Constants ---
-MODEL_PATH = "best_model.h5"
-TOKENIZER_PATH = "tokenizer.pkl"
-MAX_LEN = 200
-GDRIVE_MODEL_ID = "1y8_ss47dlFzLCql3hXdAZ_XfnK-hfUsl"
+# Load model and tokenizer
+MODEL_PATH = "./best_bert_model"
+model = BertForSequenceClassification.from_pretrained(MODEL_PATH)
+tokenizer = BertTokenizer.from_pretrained(MODEL_PATH)
 
-# --- Download model if not exists ---
-if not os.path.exists(MODEL_PATH):
-    st.info("Downloading model from Google Drive...")
-    gdown.download(f"https://drive.google.com/uc?id={GDRIVE_MODEL_ID}", MODEL_PATH, quiet=False)
-    st.success("Model downloaded successfully!")
-
-    
-# Load trained model
-model = tf.keras.models.load_model("best_model.h5")
-
-# Load tokenizer
-tokenizer = joblib.load("tokenizer.pkl")
-
-# Constants (ensure this matches what you used in training)
-MAX_LEN = 200  # Length used in pad_sequences
-
+# Set model to evaluation mode
+model.eval()
 # Streamlit UI
 st.title("📰 Fake News Detector")
 
