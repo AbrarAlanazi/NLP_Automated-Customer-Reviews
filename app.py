@@ -1,10 +1,10 @@
-import os
-os.system('pip install torch')
 import gdown
 import streamlit as st
 import tensorflow as tf
 import joblib
 import numpy as np
+import torch
+from transformers import BertTokenizer, BertForSequenceClassification
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load model and tokenizer
