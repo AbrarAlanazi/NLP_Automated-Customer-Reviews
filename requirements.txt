@@ -5,7 +5,8 @@ gdown
 pandas
 numpy
 scikit-learn
-transformers
 sentence-transformers
-torch
 tensorflow==2.16.1
+torch==1.13.1
+transformers==4.28.0
+huggingface_hub==0.14.1
