@@ -74,7 +74,7 @@ Each summary includes:
 
 The project is deployed as a web app using Streamlit.
 
-👉 [Launch the Review Sentiment Classifier App](nlpautomated-customer-reviews-ufqqsoqp4drqcvg6g5hs5o)
+👉 [Launch the Review Sentiment Classifier App](nlpautomated-customer-reviews-ohenkvcdy9omveyvrqwqxb)
 
 ---
 
